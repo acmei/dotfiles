@@ -3,7 +3,7 @@
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 
-# list of files/folders to symlink in homedi
+# list of files/folders to symlink in homedirectory
 files=".alias .bash_profile .bashrc .exports .functions .git-completion.bash .gitattributes .gitconfig .gitignore .prompt"
 
 ##########
