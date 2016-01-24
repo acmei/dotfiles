@@ -1,0 +1,21 @@
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew tap caskroom/cask
+brew install brew-cask
+brew tap caskroom/versions
+
+brew install node
+brew install git
+
+# Install programs using brew cask
+brew cask install google-chrome
+brew cask install spotify
+brew cask install sublime-text3
+brew cask install vlc
+brew cask install slack
+brew cask install flux
+brew cask install screenhero
+brew cask install utorrent
+brew cask install adobe-photoshop-cc
+brew cask install adobe-photoshop-lightroom
+brew cask install adobe-reader
+brew cask install spectacle
