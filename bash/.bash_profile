@@ -1,9 +1,6 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
-# Load the default .profile
-# [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
-
 # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.rvm/bin" 
 
