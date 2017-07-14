@@ -9,7 +9,6 @@ brew install git
 # Install programs using brew cask
 brew cask install google-chrome
 brew cask install spotify
-brew cask install sublime-text3
 brew cask install vlc
 brew cask install slack
 brew cask install flux
@@ -19,3 +18,4 @@ brew cask install adobe-photoshop-cc
 brew cask install adobe-photoshop-lightroom
 brew cask install adobe-reader
 brew cask install spectacle
+brew cask install visual-studio-code

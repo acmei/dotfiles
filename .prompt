@@ -53,7 +53,7 @@ prompt_git() {
 
       [ -n "${s}" ] && s=" [${s}]";
 
-      echo -e "${1}${branchName}${green}${s}";
+      echo -e "${1}${branchName}${yellow}${s}";
     else
       return;
     fi;
@@ -91,7 +91,7 @@ fi;
 
 # Set the terminal title to the current working directory.
 PS1="\[\033]0;\w\007\]";
-PS1+="\[${bold}\]\n"; # newline
+PS1+="\n"; # newline
 PS1+="\[${purple}\]\u"; # username
 PS1+="\[${white}\] in ";
 PS1+="\[${blue}\]\W"; # working directory

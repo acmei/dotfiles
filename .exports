@@ -12,4 +12,4 @@ export MANPAGER='less -X';
 export GREP_OPTIONS='--color=auto';
 
 # Default editor
-export EDITOR='subl -w'
+export EDITOR='code -w'

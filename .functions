@@ -62,11 +62,6 @@ function json() {
   fi;
 }
 
-# Run `dig` and display the most useful info
-function digga() {
-  dig +nocmd "$1" any +multiline +noall +answer;
-}
-
 # UTF-8-encode a string of Unicode symbols
 function escape() {
   printf "\\\x%s" $(printf "$@" | xxd -p -c1 -u);
@@ -94,13 +89,13 @@ function codepoint() {
   fi;
 }
 
-# `s` with no arguments opens the current directory in Sublime Text, otherwise
+# `s` with no arguments opens the current directory in VSCode, otherwise
 # opens the given location
 function s() {
   if [ $# -eq 0 ]; then
-    subl .;
+    code .;
   else
-    subl "$@";
+    code "$@";
   fi;
 }
 
