@@ -77,6 +77,7 @@ if tput setaf 1 &> /dev/null; then
   purple=$(tput setaf 206)
   dark_gray=$(tput setaf 232)
   dark_orange=$(tput setaf 130)
+  yellow_green=$(tput setaf 118)
 else
   bold='';
   reset="\e[0m";
@@ -99,7 +100,7 @@ PS1+="\[${dark_orange}\][\t] "; # time
 PS1+="\[${purple}\]\W"; # working directory
 PS1+="\$(prompt_git \"${white} on ${blue}\")"; # Git repository details
 PS1+="\n";
-PS1+="\[${yellow}\]➤ \[${reset}\]"; # `▹` (and reset color)
+PS1+="\[${yellow_green}\]➤ \[${reset}\]"; # `▹` (and reset color)
 export PS1;
 
 PS2="\[${yellow}\]→ \[${reset}\]";
