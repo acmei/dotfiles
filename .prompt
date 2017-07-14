@@ -24,22 +24,22 @@ prompt_git() {
 
         # Check for uncommitted changes in the index.
         if ! $(git diff --quiet --ignore-submodules --cached); then
-            s+='+';
+            s+='uncommitted';
         fi;
 
         # Check for unstaged changes.
         if ! $(git diff-files --quiet --ignore-submodules --); then
-            s+='!';
+            s+='unstaged';
         fi;
 
         # Check for untracked files.
         if [ -n "$(git ls-files --others --exclude-standard)" ]; then
-            s+='?';
+            s+='untracked';
         fi;
 
         # Check for stashed files.
         if $(git rev-parse --verify refs/stash &>/dev/null); then
-            s+='$';
+            s+='stashed';
         fi;
 
       fi;
@@ -53,7 +53,7 @@ prompt_git() {
 
       [ -n "${s}" ] && s=" [${s}]";
 
-      echo -e "${1}${branchName}${test1}${s}";
+      echo -e "${1}${branchName}${dark_gray}${s}";
     else
       return;
     fi;
@@ -76,7 +76,7 @@ if tput setaf 1 &> /dev/null; then
   yellow=$(tput setaf 136);
   purple=$(tput setaf 206)
   gold_yellow=$(tput setaf 179)
-  bright_green=$(tput setaf 76)
+  dark_gray=$(tput setaf 234)
 else
   bold='';
   reset="\e[0m";
