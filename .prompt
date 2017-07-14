@@ -53,7 +53,7 @@ prompt_git() {
 
       [ -n "${s}" ] && s=" [${s}]";
 
-      echo -e "${1}${branchName}${bright_yellow}${s}";
+      echo -e "${1}${branchName}${test1}${s}";
     else
       return;
     fi;
@@ -75,8 +75,8 @@ if tput setaf 1 &> /dev/null; then
   white=$(tput setaf 15);
   yellow=$(tput setaf 136);
   purple=$(tput setaf 206)
-  bright_yellow=$(tput setaf 220)
-  test1=$(tput setaf 43)
+  gold_yellow=$(tput setaf 179)
+  bright_green=$(tput setaf 76)
 else
   bold='';
   reset="\e[0m";
@@ -95,10 +95,10 @@ fi;
 # Set the terminal title to the current working directory.
 PS1="\[\033]0;\w\007\]";
 PS1+="\n"; # newline
-PS1+="\[${pretty_purple}\]\W"; # working directory
+PS1+="\[${purple}\]\W"; # working directory
 PS1+="\$(prompt_git \"${white} on ${blue}\")"; # Git repository details
 PS1+="\n";
-PS1+="\[${yellow}\]▹ \[${reset}\]"; # `▹` (and reset color)
+PS1+="\[${gold_yellow}\]➤ \[${reset}\]"; # `▹` (and reset color)
 export PS1;
 
 PS2="\[${yellow}\]→ \[${reset}\]";
