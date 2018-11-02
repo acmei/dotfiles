@@ -14,8 +14,6 @@ alias g="git"
 alias h="history"
 alias j="jobs"
 alias ll="ls -la"
-alias dcms="rake db:drop && rake db:create && rake db:migrate && rake db:seed"
-alias pro="cd ~/Meetup/pro-web"
 
 # Git
 alias gs='git status '
