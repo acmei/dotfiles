@@ -1,12 +1,6 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
-# Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/.rvm/bin"
-
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
 # Load the shell dotfiles:
 for file in ~/.{prompt,exports,alias,functions}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
